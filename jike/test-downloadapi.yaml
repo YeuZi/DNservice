@@ -23,13 +23,13 @@ spec:
           readOnly: false
   volumes:
     - name: podinfo
-    projected:
-      sources:
-        - downloadAPI:
-          items:
-            - path: "labels"
-              fieldRef:
-                fieldPath: metadata.labels
+      projected:
+        sources:
+          - downloadAPI:
+            items:
+              - path: "labels"
+                fieldRef:
+                  fieldPath: metadata.labels
 
 
 
