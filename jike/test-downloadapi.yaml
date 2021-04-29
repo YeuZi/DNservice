@@ -16,7 +16,7 @@ spec:
             if [[ -e /etc/podinfo/labels ]];then
               echo -en '\n\n'; cat /etc/podinfo/labels; fi
             sleep 5;
-          done
+          done;
           volumeMounts:
             - name: podinfo
               mountPath: /etc/podinfo
@@ -30,6 +30,6 @@ spec:
             - path: "labels"
               fieldRef:
                 fieldPath: metadata.labels
-                
+
 
 
