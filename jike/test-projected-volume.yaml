@@ -8,7 +8,7 @@ spec:
       image: busybox
       args:
         - sleep
-        - "200"
+        - "86400"
       volumeMounts:
         - name: mysql-cred
           mountPath: "/projected-volume"
