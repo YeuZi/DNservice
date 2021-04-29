@@ -4,7 +4,7 @@ metadata:
   name: test-projected-volume
 spec:
   containers:
-    - name: test-prohected-volume
+    - name: test-projected-volume
       image: busybox
       args:
         - sleep
