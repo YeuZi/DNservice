@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: test-prohected-volume
+spec:
+  containers:
+    - name: test-prohected-volume
+      image: busybox
+      args:
+        - sleep
+        - "86400"
+      volumeMounts:
+        - name: mysql-cred
+          mountPath: "/projected-volume"
+          readonly: true
+  volumes:
+    - name: mysql-cred
+      projected:
+        sources:
+          - secret:
+              name: user
+          - secret:
+              name: pass
+              
