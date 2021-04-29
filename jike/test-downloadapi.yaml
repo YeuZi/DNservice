@@ -25,7 +25,7 @@ spec:
     - name: podinfo
       projected:
         sources:
-          - downloadAPI:
+          - downwardAPI:
               items:
                 - path: "labels"
                   fieldRef:
