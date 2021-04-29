@@ -14,14 +14,14 @@ spec:
       args:
         - while true; do
             if [[ -e /etc/podinfo/labels ]];then
-              echo -en '\n\n'; cat /etc/podinfo/labels; fi
+              echo -en '\n\n'; cat /etc/podinfo/labels; fi;
             sleep 5;
           done;
           volumeMounts:
             - name: podinfo
               mountPath: /etc/podinfo
               readOnly: false
-  voumes:
+  volumes:
     - name: podinfo
     projected:
       sources:
