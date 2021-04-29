@@ -12,7 +12,7 @@ spec:
       volumeMounts:
         - name: mysql-cred
           mountPath: "/projected-volume"
-          readonly: true
+          readOnly: true
   volumes:
     - name: mysql-cred
       projected:
@@ -21,4 +21,4 @@ spec:
               name: user
           - secret:
               name: pass
-              
+
