@@ -26,10 +26,10 @@ spec:
       projected:
         sources:
           - downloadAPI:
-            items:
-              - path: "labels"
-                fieldRef:
-                  fieldPath: metadata.labels
+              items:
+                - path: "labels"
+                  fieldRef:
+                    fieldPath: metadata.labels
 
 
 
