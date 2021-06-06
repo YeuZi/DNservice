@@ -1,0 +1,70 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv002
+  namespace: regress
+  labels:
+    type: pv002 
+spec:
+  nfs:
+    path: /nfs/v2
+    server: 10.8.6.17
+  accessModes:
+    - ReadWriteOnce
+    - ReadWriteMany
+  capacity:
+    storage: 5Gi
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv003
+  namespace: regress
+  labels:
+    type: pv003
+spec:
+  nfs:
+    path: /nfs/v3
+    server: 10.8.6.17
+  accessModes:
+    - ReadWriteOnce
+    - ReadWriteMany
+  capacity:
+    storage: 7Gi
+
+--- 
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv004
+  namespace: regress
+  labels:
+    type: pv004
+spec:
+  nfs:
+    path: /nfs/v4
+    server: 10.8.6.17
+  accessModes:
+    - ReadWriteOnce
+    - ReadWriteMany
+  capacity:
+    storage: 9Gi
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv005
+  namespace: regress
+  labels:
+    type: pv005
+spec:
+  nfs:
+    path: /nfs/v5
+    server: 10.8.6.17
+  accessModes:
+    - ReadWriteOnce
+    - ReadWriteMany
+  capacity:
+    storage: 11Gi
